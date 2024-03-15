@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>러닝허브 관리자</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/jquery-sortable-lists.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/run.js"></script>
+</head>
+
+<body>
+    <div class="body_wrap">
+        <!--header-->
+        <div id="header">
+            <!--header_nav-->
+            <div class="header_nav">
+                <a href="javascript:;" class="logo">
+                    <img src="images/logo.png" alt="LearningHUB">
+                </a>
+                <div class="gnb_wrap">
+                    <ul class="gnb">
+                        <li>
+                            <a href="javascript:;">메인</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">공통관리</a>
+                            <ul>
+                                <li><a href="javascript:;">회원 관리</a></li>
+                                <li><a href="javascript:;">튜터 관리</a></li>
+                                <li><a href="javascript:;">권한 관리</a></li>
+                                <li><a href="javascript:;">코드 관리</a></li>
+                                <li><a href="javascript:;">기관 관리</a></li>
+                                <li><a href="javascript:;">환급 신고 관리</a></li>
+                                <li><a href="javascript:;">수요조사 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">콘텐츠 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">과정 관리</a></li>
+                                <li><a href="javascript:;">콘텐츠 관리</a></li>
+                                <li><a href="javascript:;">교육자료 관리</a></li>
+                                <li><a href="javascript:;">시험 관리</a></li>
+                                <li><a href="javascript:;">과제 관리</a></li>
+                                <li><a href="javascript:;">토론 관리</a></li>
+                                <li><a href="javascript:;">설문 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">교육 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">기수 관리</a></li>
+                                <li><a href="javascript:;">수강 관리</a></li>
+                                <li><a href="javascript:;">학습 준비 과정 운영</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">사이트 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">게시판 관리</a></li>
+                                <li><a href="javascript:;">사이트 관리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">통계 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">접속 통계</a></li>
+                                <li><a href="javascript:;">메일발송 관리</a></li>
+                                <li><a href="javascript:;">SMS발송 관리</a></li>
+                                <li><a href="javascript:;">교육 통계</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">부가기능 관리</a>
+                            <ul>
+                                <li><a href="javascript:;">연통 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="gnbBg"></div>
+                </div>
+                <a href="javascript:;" class="menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!--//header_nav-->
+            <!--sidebar_menu-->
+            <div class="sidebar_menu">
+                <a href="javascript:;" class="hide_btn"><span></span></a>
+                <div class="account">
+                    <h3>홍길동님(총괄관리자)</h3>
+                    <div class="btn_wrap">
+                        <a href="javascript:;" class="logout">로그아웃</a>
+                        <a href="javascript:;" class="homepage">홈페이지</a>
+                    </div>
+                </div>
+                <ul class="side_menu">
+                    <li class="active"><a href="javascript:;">회원관리</a>
+                        <ul>
+                            <li class="active"><a href="javascript:;">회원정보 관리</a></li>
+                            <li><a href="javascript:;">개인 수강이력</a></li>
+                            <li><a href="javascript:;">조회</a></li>
+                            <li><a href="javascript:;">개인정보</a></li>
+                            <li><a href="javascript:;">접근관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">VOC 현황</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">튜터 관리</a>
+                        <ul>
+                            <li><a href="javascript:;">튜터 정보관리</a></li>
+                            <li><a href="javascript:;">튜터 활동현황</a></li>
+                            <li><a href="javascript:;">튜터 등급관리</a></li>
+                            <li><a href="javascript:;">강사료</a></li>
+                            <li><a href="javascript:;">지급현황</a></li>
+                            <li><a href="javascript:;">튜터 공지사항</a></li>
+                            <li><a href="javascript:;">튜터 게시판</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">권한 관리</a>
+                        <ul>
+                            <li><a href="javascript:;">프로그램 등록</a></li>
+                            <li><a href="javascript:;">시스템 권한</a></li>
+                            <li><a href="javascript:;">시스템 메뉴</a></li>
+                            <li><a href="javascript:;">사용자 권한</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">코드 관리</a>
+                        <ul>
+                            <li><a href="javascript:;">공통코드 관리</a></li>
+                            <li><a href="javascript:;">메일 유형코드 관리</a></li>
+                            <li><a href="javascript:;">SMS 유형코드 관리</a></li>
+                            <li><a href="javascript:;">직급코드 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">기관 관리</a>
+                        <ul>
+                            <li><a href="javascript:;">테마 관리</a></li>
+                            <li><a href="javascript:;">기관 관리</a></li>
+                            <li><a href="javascript:;">기관별 메뉴 관리</a></li>
+                            <li><a href="javascript:;">기관별 과정 관리</a></li>
+                            <li><a href="javascript:;">수강제약 관리</a></li>
+                            <li><a href="javascript:;">교육일정 관리</a></li>
+                            <li><a href="javascript:;">역량진단 관리</a></li>
+                            <li><a href="javascript:;">과정 이벤트 </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">환급신고 관리</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">수요조사 관리</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//sidebar_menu-->
+        </div>
+        <!--//header-->
+        <div class="content_wrapper">
+            <div class="page-title">
+                <h3>기수정보 관리</h3>
+                <ul class="breadcrumb">
+                    <li>콘텐츠 관리</li>
+                    <li>설문 관리</li>
+                    <li>설문지 관리</li>
+                </ul>
+            </div>
+            
+            
+            <div class="clear mt30">
+                <ul class="tabs fl">
+                    <li> <a href="javascript:;" onclick="#">기수 정보</a>
+                    </li>
+                    <li> <a href="javascript:;" onclick="#">고용보험</a>
+                    </li>
+                    <li> <a href="javascript:;" onclick="#">평가계획</a>
+                    </li>
+                    <li class="active"><a href="javascript:;">담당 튜터</a></li>
+                </ul>
+            </div>
+            <hr class="line">
+            
+            
+            <div class="flex acenter mt30">
+            <h3 class="tit" >기수 튜터</h3>
+            <a href="javascript:;" class="btn_style01 btn_gray01 mla">튜터 추가</a>
+            </div>
+            <table class="table_style02 mt20">
+            <caption>수 튜터</caption>
+            <colgroup>
+                <col style="width:100px">
+                <col style="width: 150px">
+                <col>
+                <col>
+                <col style="width: 150px">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">강사 구분</th>
+                        <th scope="col">강사명</th>
+                        <th scope="col">아이디</th>
+                        <th scope="col">삭제</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>내부</td>
+                        <td>이선아</td>
+                        <td>0001_sme89</td>
+                        <td><a href="javascript:;" class="btn_style01 btn_gray01 mla">삭제</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+              <div class="flex acenter mt30">
+            <h3 class="tit" >콘텐츠 내용전문가</h3>
+            <a href="javascript:;" class="btn_style01 btn_gray01 mla">SME 추가</a>
+            </div>
+            <table class="table_style02 mt20">
+                <caption>콘텐츠 내용전문가</caption>
+                <colgroup>
+                    <col style="width: 150px">
+                    <col style="width: 150px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th rowspan="4" colspan="row">내용전문가 1<br>
+                        <a href="javascript:;" class="btn_style03 btn_gray02 mt10 ">삭제</a>
+                        </th>
+                        <td class="bg_gray">
+                          <label for="name1">이름 <span class="red">*</span></label>
+                        </td>
+                        <td class="tlt">
+                            <input type="text" id="name1"> <span class="ml10"><input type="checkbox" id="opt1">
+                                <label for="opt1">대표 전문가</label></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <label for="team1">소속 <span class="red">*</span></label></td>
+                        <td class="tlt">
+                            <input type="text" class="w50p" id="team1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="career1">경력</label>
+                        </td>
+                           <td>
+                            <textarea class="textarea" id="career1"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>대표 이미지</td>
+                        <td class="tlt"><div class="filetype">
+                                        <input type="text" class="file-text" />
+                                        <span class="file-btn">파일찾기</span>
+                                        <span class="file-select"><input type="file" class="input-file" size="3"></span>
+                                    </div></td>
+                    </tr>
+                    
+                    <tr>
+                        <th rowspan="4" colspan="row">내용전문가 2<br>
+                        <a href="javascript:;" class="btn_style03 btn_gray02 mt10 ">삭제</a>
+                        </th>
+                        <td class="bg_gray">
+                          <label for="name2">이름 <span class="red">*</span></label>
+                        </td>
+                        <td class="tlt">
+                            <input type="text" id="name2"> <span class="ml10"><input type="checkbox" id="opt2">
+                                <label for="opt2">대표 전문가</label></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <label for="team2">소속 <span class="red">*</span></label></td>
+                        <td class="tlt">
+                            <input type="text" class="w50p" id="team2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="career2">경력</label>
+                        </td>
+                           <td>
+                            <textarea class="textarea" id="career2"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>대표 이미지</td>
+                        <td class="tlt"><div class="filetype">
+                                        <input type="text" class="file-text" />
+                                        <span class="file-btn">파일찾기</span>
+                                        <span class="file-select"><input type="file" class="input-file" size="3"></span>
+                                    </div></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+           
+           <!--팝업-->
+            <div class="popUp modal1" title="시험지 미리보기">
+                <div class="inbtn">
+                    <h3 class="popTit flex acenter">
+                        <p>시험지명이 출력됩니다.</p>
+                        <div class="mla">
+                            <a href="#" class="btn_style03 btn_black">자동채점하기</a>
+                        </div>
+                    </h3>
+                    <table class="table_style03">
+                        <caption>시험지 미리보기</caption>
+                        <colgroup>
+                            <col style="width: 100px">
+                            <col>
+                            <col style="width: 100px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">과정명(과정ID)</th>
+                                <td colspan="3">KSD 내부직원을 위하 IT이해 직무교육(1032701)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">시험 구분</th>
+                                <td>중간시험</td>
+                                <th scope="row">문항 수</th>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="test_list">
+                        <div class="item">
+                            <div class="q">Q1. 문항명이 출력됩니다.</div>
+                            <div class="cont mulit_cce">
+                                <ul>
+                                    <li class="radio">
+                    <input type="radio" id="ex_rd" name="ex_rd"><label for="ex_rd">보기1 항목</label>
+                                    </li>
+                                    <li><li class="radio">
+                    <input type="radio" id="ex_rd02" name="ex_rd"><label for="ex_rd02">보기2 항목</label></li>
+                                    <li>
+                                        <li class="radio">
+                    <input type="radio" id="ex_rd03" name="ex_rd"><label for="ex_rd03">보기3 항목</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="a">
+                                <table class="table_style01">
+                                    <caption>정답</caption>
+                                    <colgroup>
+                                        <col style="width: 100px">
+                                        <col>
+                                        <col style="width: 100px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">정답</th>
+                                            <td colspan="3">2</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">채점</th>
+                                            <td>
+                                                <ul class="check_list">
+            <li>
+                <div class="radio">
+                    <input type="radio" id="ex_rdd" name="ex_rdd"><label for="ex_rdd">정답</label>
+                </div>
+            </li>
+            <li>
+                <div class="radio">
+                    <input type="radio" id="ex_rdd2" name="ex_rdd"><label for="ex_rdd2">오답</label>
+                </div>
+            </li>
+                                           
+                                                </ul>
+                                            </td>
+                                            <th scope="row">배점</th>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">점수</th>
+                                            <td colspan="3">
+                                                <div class="flex acenter">
+                                                    <input type="text" class="w50 mr10">
+                                                    <p class="mr10">점</p>
+                                                    <p class="red">※ 점수는 배점 이상으로 부여할 수 없으며, 소수점 한자리까지 부여할 수 있습니다.
+</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="q">Q2. 문항명이 출력됩니다.</div>
+                            <div class="cont sf">
+                               <div class="box">
+                                   <p>  응시자가 작성한 주관식의 내용입니다.   
+</p>
+                               </div>
+                            </div>
+                            <div class="a">
+                                <table class="table_style01">
+                                    <caption>정답</caption>
+                                    <colgroup>
+                                        <col style="width: 100px">
+                                        <col>
+                                        <col style="width: 100px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">정답</th>
+                                            <td colspan="3">주관식 문항의 정답이 표시됩니다. 내용은 문항등록 시 입력한 내용입니다. 
+</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">채점</th>
+                                            <td>
+                                                <ul class="check_list">
+            <li>
+                <div class="radio">
+                    <input type="radio" id="ex_rdd" name="ex_rdd"><label for="ex_rdd">정답</label>
+                </div>
+            </li>
+            <li>
+                <div class="radio">
+                    <input type="radio" id="ex_rdd2" name="ex_rdd"><label for="ex_rdd2">오답</label>
+                </div>
+            </li>
+                                           
+                                                </ul>
+                                            </td>
+                                            <th scope="row">배점</th>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">점수</th>
+                                            <td colspan="3">
+                                                <div class="flex acenter">
+                                                    <input type="text" class="w50 mr10">
+                                                    <p class="mr10">점</p>
+                                                    <p class="red">※ 점수는 배점 이상으로 부여할 수 없으며, 소수점 한자리까지 부여할 수 있습니다.
+</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn_wrap tct">
+                    <a href="#" class="btn_style03 btn_black w85">저장</a>
+                    <a href="#" class="btn_style03 btn_white w85 close_pop">닫기</a>
+                </div>
+            </div>
+            
+           
+            <div class="bt_fixed">
+                <div class="fr">
+                    <a href="javascript:;" class="btn_style03 btn_orange w85">저장</a>
+                    <a href="#" class="btn_style03 btn_white w85">목록</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
